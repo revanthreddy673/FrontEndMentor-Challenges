@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+/* font-family: 'Big Shoulders Display', cursive;
+font-family: 'Lexend Deca', sans-serif; */
+
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  --very-light-gray: hsl(0, 0%, 95%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+body {
+  min-height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--very-light-gray);
+}
+
+.container {
+  display: flex;
+  max-width: 70%;
+}
+
+.card {
+  position: relative;
+  width: calc(100% / 3);
+  padding: 4em;
+  display: flex;
+  flex-direction: column;
+}
+
+.card h1 {
+  color: var(--very-light-gray);
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-family: "Big Shoulders Display", cursive;
+  margin-bottom: 0.5em;
+}
+
+.card p {
+  color: var(--transparent-white);
+  margin-bottom: 6em;
+}
+
+.card button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.75em 2em;
+  background-color: var(--very-light-gray);
+  border-radius: 25px;
+  border: 2px solid;
+  margin-top: auto;
+  cursor: pointer;
+  transition: color 0.4s, border-color 0.4s, background-color 0.4s;
+}
+
+.card button:hover {
+  color: var(--transparent-white);
+  border-color: var(--transparent-white);
+}
+
+.card-1 button:hover {
+  background-color: var(--bright-orange);
+}
+
+.card-2 button:hover {
+  background-color: var(--dark-cyan);
+}
+
+.card-3 button:hover {
+  background-color: var(--very-dark-cyan);
+}
+
+.card-1 {
+  background-color: var(--bright-orange);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.card-2 {
+  background-color: var(--dark-cyan);
+  /* padding-right: 3.25em; */
+}
+
+.card-3 {
+  background-color: var(--very-dark-cyan);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  /* padding-right: 3em; */
+}
+
+.card-1 button {
+  color: var(--bright-orange);
+}
+
+.card-2 button {
+  color: var(--dark-cyan);
+}
+
+.card-3 button {
+  color: var(--very-dark-cyan);
+}
+
+.attribution {
+  margin: 1em 0;
+  text-align: center;
+}
+
+svg {
+  fill: currentColor;
+}
+
+@media screen and (max-width: 700px) {
+  .container {
+    flex-direction: column;
+    margin: 50px;
+  }
+  .card {
+    width: 100%;
+  }
+  .card-1 {
+    border-radius: 10px 10px 0px 0px;
+  }
+  .card-3 {
+    border-radius: 0px 0px 10px 10px;
+  }
+}
