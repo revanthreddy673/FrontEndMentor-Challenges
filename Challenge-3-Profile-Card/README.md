@@ -1,18 +1,16 @@
-# Frontend Mentor - 3-column preview card component solution
+# Frontend Mentor - Profile card component solution
 
-This is a solution to the [3-column preview card component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/3column-preview-card-component-pH92eAR2-). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [Profile card component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/profile-card-component-cfArpWshJ). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
 - [Author](#author)
 
 
@@ -27,8 +25,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/revanthreddy673/FrontEndMentor-Challenges/tree/master/Challenge-2-Column-Card)
-- Live Site URL: [Add live site URL here](https://revanth-column-preview.netlify.app/)
+- Solution URL: [Add solution URL here](https://github.com/revanthreddy673/FrontEndMentor-Challenges/tree/master/Challenge-2-Profile-Card)
+- Live Site URL: [Add live site URL here](https://revanth-profile-card.netlify.app/)
 
 ## My process
 
@@ -42,14 +40,11 @@ Users should be able to:
 ### What I learned
 
 	Using flex direction:column to align things perfectly is the biggest learning.
+	use width:100% on flex-items to make each flex-item occupy the same space as the other.
 
 ### Continued development
 
 	I would always like to improve my code with each and every project.
-
-### Useful resources
-
-- [resource 1](https://stackoverflow.com/questions/33924655/position-last-flex-item-at-the-end-of-container) - This helped me in placing the last item at the end of the container in each column.
 
 ## Author
 

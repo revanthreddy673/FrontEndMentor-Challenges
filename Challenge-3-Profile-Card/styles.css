@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root {
+    --dark-cyan: hsl(185, 75%, 39%);
+    --very-dark-saturated-blue: hsl(229, 23%, 23%);
+    --dark-greyish-blue: hsl(227, 10%, 46%);
+    --dark-gray: hsl(0, 0%, 59%);
+    --border-color: hsl(0, 0%, 89%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 15px;
+}
+
+body {
+    min-height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--dark-cyan);
+    background-image: url(images/bg-pattern-top.svg), url(images/bg-pattern-bottom.svg);
+    background-repeat: no-repeat;
+    background-position: right 50vw bottom 50vh, 50vw 50vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.container .img-section {
+    background-image: url(images/bg-pattern-card.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: 100% 100%;
+    padding: 4em 10em;
+    border-radius: 10px 10px 0 0;
+}
+
+.container .about,
+.container ul.stats {
+    background-color: #fff;
+}
+
+.container .about {
+    text-align: center;
+    padding-bottom: 9em;
+    position: relative;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.container .about img {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    border: 5px solid #fff;
+}
+
+.container .about h2 {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.2rem;
+    color: var(--very-dark-saturated-blue);
+}
+
+.container .about h2 span {
+    font: inherit;
+    color: var(--dark-gray);
+}
+
+.container .about small {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--dark-gray);
+}
+
+.container ul.stats {
+    display: flex;
+    list-style-type: none;
+    padding: 2em;
+    border-radius: 0 0 10px 10px;
+}
+
+.container ul.stats li {
+    width: 100%;
+}
+
+.col+.col {
+    margin-left: 2em;
+}
+
+.container ul.stats li span {
+    display: block;
+}
+
+.container ul.stats li span:first-of-type {
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--very-dark-saturated-blue);
+    margin-bottom: 0.5em;
+    font-weight: 700;
+}
+
+.container ul.stats li span:last-of-type {
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    text-align: center;
+    color: var(--dark-greyish-blue);
+}
+
+.attribution {
+    margin: 1em 0;
+    text-align: center;
+}
