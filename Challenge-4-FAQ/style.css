@@ -41,6 +41,8 @@ img {
     background-color: white;
     border-radius: 10px;
     margin: 0 4em;
+    max-width: 840px;
+    max-height: 478px;
 }
 
 .image-section,
@@ -82,8 +84,6 @@ img {
 .faq-section {
     position: relative;
     padding: 5em 4em 5em 2em;
-    max-width: 478px;
-    max-height: 510px;
     overflow-y: auto;
 }
 
@@ -107,6 +107,7 @@ img {
 .question p {
     color: var(--very-dark-desaturated-blue);
     margin-right: 4em;
+    font-size: 0.8rem;
 }
 
 .question p:hover {
