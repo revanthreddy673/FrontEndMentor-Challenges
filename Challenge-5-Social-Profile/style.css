@@ -104,7 +104,6 @@ body {
 .testimonial {
     width: 100%;
     background-color: var(--very-dark-magenta);
-    color: var(--white);
     border-radius: 10px;
     padding: 2em;
     display: flex;
@@ -130,6 +129,7 @@ body {
 
 .testimonial cite p {
     font-weight: 500;
+    color: var(--white);
 }
 
 .testimonial cite span {
@@ -141,9 +141,10 @@ body {
 
 .testimonial blockquote {
     margin-top: 2em;
-    opacity: 0.8;
+    color: var(--light-grayish-magenta);
     font-size: 0.9rem;
     font-weight: 500;
+    line-height: 1.5;
 }
 
 .testimonial:nth-of-type(2) {
