@@ -14,6 +14,13 @@ document.querySelector(".share-btn").addEventListener("click", function () {
   }
 });
 
+document
+  .querySelector(".share-btn-pop-up")
+  .addEventListener("click", function () {
+    document.querySelector(".pop-up").classList.toggle("hidden");
+    document.querySelector(".share-btn-pop-up").classList.add("btn-hidden");
+  });
+
 window.addEventListener("resize", function () {
   if (window.innerWidth >= 700) {
     document.querySelector(".pop-up").classList.remove("mobile");

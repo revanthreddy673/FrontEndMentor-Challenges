@@ -123,8 +123,9 @@ body {
     padding: 1em 2em;
     border-radius: 10px;
     position: absolute;
+    height: auto;
     opacity: 1;
-    transition: opacity 0.5s ease-out;
+    transition: opacity 0.5s ease-out, height 0.5s ease-out;
 }
 
 .desktop {
@@ -164,6 +165,7 @@ body {
 
 .hidden {
     opacity: 0;
+    height: 0;
 }
 
 .attribution {
