@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+:root {
+    --desaturated-red: hsl(0, 36%, 70%);
+    --soft-red: hsl(0, 93%, 68%);
+    --dark-grayish-red: hsl(0, 6%, 24%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 16px;
+}
+
+body {
+    min-height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(images/bg-pattern-desktop.svg);
+}
+
+.container {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+}
+
+.logo {
+    position: absolute;
+    top: 5%;
+    left: 16%;
+}
+
+.logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+.image-section {
+    width: 35%;
+    background-image: url(images/hero-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    order: 2;
+}
+
+.content-section {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-section h1 {
+    font-size: 4rem;
+    color: var(--desaturated-red);
+    max-width: 50%;
+    text-transform: uppercase;
+    line-height: 1.2;
+    font-weight: 300;
+    letter-spacing: 10px;
+}
+
+.content-section h1 span {
+    font-size: inherit;
+    color: var(--dark-grayish-red);
+    font-weight: 600;
+}
+
+.content-section p {
+    color: var(--desaturated-red);
+    max-width: 50%;
+    line-height: 1.5;
+    margin: 1em 0;
+}
+
+.content-section .input-div {
+    display: flex;
+    width: 50%;
+    position: relative;
+}
+
+.input-div input {
+    width: 100%;
+    border: 1px solid var(--desaturated-red);
+    border-radius: 25px;
+    padding: 1em 1em;
+}
+
+.input-div input::placeholder {
+    color: var(--desaturated-red);
+}
+
+.input-div input:focus {
+    outline: none;
+    border-color: var(--soft-red);
+    border-width: 2px;
+}
+
+.input-div button {
+    background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    border-radius: 25px;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1em 3em;
+}
+
+input,
+button {
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.alert-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 115px;
+}
+
+.alert-msg {
+    margin-top: 1em;
+    width: 50%;
+    margin-left: 5em;
+    color: var(--soft-red);
+}
+
+.hidden {
+    display: none;
+}
+
+.attribution {
+    margin: 1em 0;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 700px) {
+    .container {
+        flex-direction: column-reverse;
+        margin: 6em 0 2em 0;
+    }
+
+    .image-section {
+        width: 100%;
+        min-height: 400px;
+        background-image: url(images/hero-mobile.jpg);
+        margin-bottom: 4em;
+        background-position: initial;
+    }
+
+    .content-section {
+        width: 100%;
+    }
+
+    .content-section h1,
+    .content-section p {
+        max-width: 70%;
+    }
+
+    .content-section .input-div {
+        width: 70%;
+    }
+
+    .alert-msg {
+        margin-left: 0;
+    }
+}
