@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+:root {
+    --violet: hsl(257, 40%, 49%);
+    --soft-magenta: hsl(300, 69%, 71%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+}
+
+body {
+    min-height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--violet);
+    background-image: url(images/bg-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+::marker {
+    content: "";
+}
+
+.container {
+    max-width: 90vw;
+}
+
+header {
+    margin-bottom: 3em;
+}
+
+header img {
+    height: 45px;
+}
+
+main {
+    display: flex;
+}
+
+.img-section {
+    width: 55%;
+    background-image: url(images/illustration-mockups.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-height: 450px;
+}
+
+.content-section {
+    width: 45%;
+    padding: 3em;
+}
+
+.content-section h1 {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 0.5em;
+}
+
+.content-section p {
+    color: white;
+    margin-bottom: 1em;
+}
+
+.content-section button {
+    border: none;
+}
+
+.content-section button {
+    padding: 1em 4em;
+    background-color: white;
+    border-radius: 25px;
+    color: var(--violet);
+    cursor: pointer;
+    font-weight: 600;
+    transition: color 0.4s, background-color 0.4s, font-weight 0.4s;
+}
+
+.content-section button:hover {
+    background-color: var(--soft-magenta);
+    color: white;
+    font-weight: 400;
+}
+
+.content-section button:focus {
+    outline: none;
+}
+
+footer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.social-icons {
+    display: flex;
+}
+
+.social-icons li a {
+    color: inherit;
+}
+
+.social-icons li {
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 50%;
+    margin-right: 2em;
+    color: white;
+    cursor: pointer;
+    transition: border-color 0.4s, color 0.4s;
+}
+
+.social-icons>li>a>i {
+    font-size: 1.25rem;
+}
+
+.social-icons li:hover {
+    border-color: var(--soft-magenta);
+    color: var(--soft-magenta);
+}
+
+@media screen and (max-width: 700px) {
+
+    body {
+        background-image: url(images/bg-mobile.svg);
+    }
+
+    .container {
+        margin: 2em 0;
+        max-width: 80vw;
+    }
+
+    header img {
+        height: 35px;
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    .img-section {
+        width: 100%;
+        min-height: 300px;
+    }
+
+    .content-section {
+        width: 100%;
+        text-align: center;
+    }
+
+    .content-section h1 {
+        font-size: 1.75rem;
+    }
+
+    footer {
+        justify-content: center;
+    }
+}
