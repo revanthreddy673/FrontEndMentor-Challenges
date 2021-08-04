@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+:root {
+    --strong-cyan: hsl(172, 67%, 45%);
+    --very-dark-cyan: hsl(183, 100%, 15%);
+    --dark-grayish-cyan: hsl(186, 14%, 43%);
+    --dark-grayish-cyan-type1: hsl(184, 14%, 56%);
+    --light-grayish-cyan: hsl(185, 41%, 84%);
+    --light-grayish-cyan-type1: hsl(189, 41%, 97%);
+    --white: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Mono', monospace;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+body {
+    min-height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--light-grayish-cyan);
+}
+
+/*********************** Common Styles ************************/
+input,
+button {
+    border: none;
+    background: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+input:focus {
+    border: none;
+    outline: none;
+}
+
+button:focus {
+    outline: none;
+}
+
+.person-img,
+.dollar-img {
+    height: 15px;
+}
+
+.input-active {
+    border: 2px solid var(--light-grayish-cyan);
+}
+
+.buttons .btn.btn-active {
+    background-color: var(--light-grayish-cyan);
+    color: var(--very-dark-cyan);
+}
+
+.error-active {
+    border: 2px solid red;
+}
+
+/************************ Header ******************************/
+
+header {
+    margin-bottom: 3em;
+}
+
+header h1 {
+    color: var(--very-dark-cyan);
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    text-align: center;
+}
+
+header h1 span {
+    display: block;
+}
+
+/********************* Main **********************************/
+main {
+    display: flex;
+    background-color: white;
+    padding: 2em;
+    border-radius: 15px;
+    max-width: 750px;
+}
+
+/***************** Main Input Section **********************/
+.input-section {
+    width: 100%;
+}
+
+.bill-container,
+.tip-div,
+.persons-container {
+    width: 90%;
+}
+
+.bill-container,
+.tip-div {
+    margin-bottom: 2em;
+}
+
+.bill-container h2,
+.tip-div h2,
+.persons-container h2 {
+    color: var(--dark-grayish-cyan);
+    margin-bottom: 1em;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.buttons .btn {
+    padding: 5px 0;
+    border-radius: 5px;
+    background-color: var(--very-dark-cyan);
+    color: white;
+    font-size: 1.2rem;
+    transition: border 0.1s;
+}
+
+.custom-value {
+    width: 100%;
+    height: 100%;
+    background-color: var(--light-grayish-cyan-type1);
+    border-radius: 5px;
+    padding: 0 10px;
+    font-weight: 700;
+    color: var(--very-dark-cyan);
+    font-size: 1.2rem;
+    text-align: right;
+}
+
+.input-holder {
+    display: flex;
+    background-color: var(--light-grayish-cyan-type1);
+    padding: 0 0.5em;
+    border-radius: 5px;
+    align-items: center;
+    transition: border 0.1s;
+}
+
+.input-holder input {
+    margin-left: auto;
+    color: var(--very-dark-cyan);
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-align: right;
+    width: 50%;
+}
+
+.text-container {
+    display: flex;
+}
+
+.text-container .alert-msg {
+    margin-left: auto;
+    color: red;
+    display: none;
+    transition: display 0.4s;
+}
+
+
+/*************** Total Section ***********************/
+.total-section {
+    width: 100%;
+    background-color: var(--very-dark-cyan);
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 2em;
+}
+
+.total-section button {
+    margin-top: auto;
+    text-transform: uppercase;
+}
+
+.amount-holder,
+.amount {
+    display: flex;
+}
+
+.amount-holder .content h3 {
+    color: var(--white);
+}
+
+.amount-holder .content small {
+    color: var(--dark-grayish-cyan-type1);
+}
+
+.amount-holder {
+    margin-bottom: 2em;
+}
+
+.amount {
+    margin-left: auto;
+}
+
+#tip-value,
+#total-value {
+    color: var(--strong-cyan);
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.reset {
+    background-color: var(--strong-cyan);
+    opacity: 0.5;
+    color: var(--very-dark-cyan);
+    padding: 10px 0;
+    border-radius: 10px;
+    transition: opacity 0.4s;
+}
+
+.reset.reset-active {
+    opacity: 1;
+    font-weight: 700;
+}
+
+/***************** Footer ******************/
+
+footer {
+    margin-top: 2em;
+    text-align: center;
+}
+
+@media screen and (max-width: 700px) {
+
+    .container {
+        max-width: 90vw;
+        margin: 2em 0;
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    .input-section {
+        margin-bottom: 2em;
+    }
+
+    .buttons {
+        grid-template-columns: 1fr 1fr;
+    }
+}
