@@ -428,8 +428,8 @@ footer ul li a {
     display: flex;
     justify-content: center;
     padding: 4em 0;
-    width: 80vw;
-    top: 25%;
+    width: 75vw;
+    top: 15%;
     left: 10%;
     box-shadow: 0px 4px 4px white;
     transition: transform 0.4s ease;
@@ -474,7 +474,7 @@ footer ul li a {
 
 .nav-icon {
     margin-left: auto;
-    margin-right: 4em;
+    margin-right: 2em;
     transition: transform 0.4s ease;
     cursor: pointer;
 }

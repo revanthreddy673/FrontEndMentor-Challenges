@@ -27,7 +27,7 @@ class App {
   _mobileinit() {
     navBar.classList.add("out-of-view");
     navIcon.classList.remove("out-of-view");
-    mobileNav.classList.remove("nav-out-of-view");
+    mobileNav.classList.add("nav-out-of-view");
   }
 
   resizeListener() {
