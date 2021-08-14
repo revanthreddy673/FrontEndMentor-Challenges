@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+:root {
+    --lime-green: hsl(163, 72%, 41%);
+    --bright-red: hsl(356, 69%, 56%);
+    --facebook: hsl(208, 92%, 53%);
+    --twitter: hsl(203, 89%, 53%);
+    --insta-color1: hsl(37, 97%, 70%);
+    --insta-color2: hsl(329, 70%, 58%);
+    --youtube: hsl(348, 97%, 39%);
+    --dark-desaturated-blue: hsl(228, 28%, 20%);
+    --destsurated-blue: hsl(228, 34%, 66%);
+    --white: hsl(0, 0%, 100%);
+    --light-grayish-blue: hsl(227, 47%, 96%);
+    --dark-grayish-blue: hsl(228, 12%, 44%);
+    --very-dark-blue: hsl(230, 17%, 14%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    width: 100vw;
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+}
+
+.container {
+    width: 80vw;
+    margin: 2em 0;
+}
+
+.mainText,
+.subText {
+    transition: color 0.5s linear;
+    font-weight: 700;
+}
+
+/**************** dark theme classes ************/
+.darkMainText {
+    color: var(--white);
+}
+
+.darkSubText {
+    color: var(--destsurated-blue);
+}
+
+.darkCardBg {
+    background-color: var(--dark-desaturated-blue);
+}
+
+.darkBody {
+    background: linear-gradient(to top, hsl(230, 17%, 14%) 70%, hsl(232, 19%, 15%) 70%);
+}
+
+.card.darkCardBg:hover {
+    background-color: hsl(228deg 39% 25%);
+}
+
+/**************** light theme classes ************/
+.lightMainText {
+    color: var(--very-dark-blue);
+}
+
+.lightSubText {
+    color: var(--dark-grayish-blue);
+}
+
+.lightCardBg {
+    background-color: var(--light-grayish-blue);
+}
+
+.lightBody {
+    background: linear-gradient(to top, hsl(0, 0%, 100%) 70%, hsl(225, 100%, 98%) 70%);
+}
+
+.card.lightCardBg:hover {
+    background-color: hsl(227deg 15% 91%);
+}
+
+/*************** header ****************/
+header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 2em;
+}
+
+.toggle {
+    margin-left: auto;
+    display: flex;
+}
+
+.main-heading h1 {
+    font-size: 2rem;
+}
+
+.main-heading p {
+    font-weight: 700;
+}
+
+.toggle .text {
+    font-weight: 700;
+    margin-right: 1em;
+    padding: 5px 0;
+}
+
+/************* Toggle btn *************/
+.btn {
+    cursor: pointer;
+    width: 60px;
+    border-radius: 25px;
+    position: relative;
+    transition: background 0.5s;
+}
+
+.toggleLight {
+    background-color: hsl(230, 22%, 74%);
+}
+
+.btn::after {
+    position: absolute;
+    content: "";
+    height: 80%;
+    top: 2px;
+    right: 3px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: var(--white);
+    opacity: 0;
+    transition: opacity 0.5s linear;
+}
+
+.toggleLight:hover {
+    background: linear-gradient(hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+}
+
+.toggleDark {
+    background: linear-gradient(hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+}
+
+.btn::before {
+    position: absolute;
+    content: "";
+    height: 80%;
+    top: 2px;
+    left: 3px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: var(--dark-desaturated-blue);
+    opacity: 0;
+    transition: opacity 0.5s linear;
+}
+
+.btn.toggleLight::after {
+    opacity: 1;
+}
+
+.btn.toggleDark::before {
+    opacity: 1;
+}
+
+/*************** Total Overview ****************/
+.total-overview {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 1em;
+    margin-bottom: 2em;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2em 0;
+    cursor: pointer;
+    border-radius: 5px;
+    position: relative;
+    transition: background-color 0.5s;
+    overflow: hidden;
+}
+
+.card-1 {
+    border-top: 3px solid var(--facebook);
+}
+
+.card-2 {
+    border-top: 3px solid var(--twitter);
+}
+
+.card-3::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, var(--insta-color1), var(--insta-color2));
+}
+
+.card-4 {
+    border-top: 3px solid var(--youtube);
+}
+
+.username {
+    display: flex;
+    margin-bottom: 1em;
+}
+
+.username img {
+    margin-right: 10px;
+}
+
+.total-count {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2em;
+}
+
+.total-count h2 {
+    font-size: 4rem;
+}
+
+.total-count p {
+    letter-spacing: 5px;
+    font-weight: 400 !important;
+    text-transform: uppercase;
+}
+
+.change {
+    display: flex;
+    align-items: center;
+    margin-top: auto;
+}
+
+.change>* {
+    margin-right: 2px;
+}
+
+.change .value.increase {
+    color: var(--lime-green);
+    font-weight: 700;
+    font-size: 0.85rem;
+}
+
+.change .value.decrease {
+    color: var(--bright-red);
+    font-weight: 700;
+    font-size: 0.85rem;
+}
+
+/*************** Overview Today ******************/
+.overview-today h3 {
+    margin-bottom: 1em;
+    font-size: 1.5rem;
+}
+
+.overview-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1em;
+}
+
+.views,
+.count {
+    display: flex;
+    width: 85%;
+}
+
+.views {
+    margin-bottom: 1em;
+}
+
+.count p {
+    font-size: 2rem;
+}
+
+.views img,
+.count .change {
+    margin-left: auto;
+}
+
+@media screen and (max-width:700px) {
+    .container {
+        width: 90vw;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: normal;
+    }
+
+    .main-heading {
+        padding-bottom: 2em;
+        margin-bottom: 2em;
+        border-bottom: 1px solid var(--dark-grayish-blue);
+    }
+
+    .toggle {
+        margin-left: 0;
+        margin-bottom: 1em;
+    }
+
+    .toggle .btn {
+        margin-left: auto;
+    }
+
+    .overview-container,
+    .total-overview {
+        display: block;
+    }
+
+    .card {
+        margin-bottom: 1em;
+    }
+}
