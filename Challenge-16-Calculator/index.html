@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+        <link rel="stylesheet" href="style.css">
+        <script defer src="script.js"></script>
+        <title>Frontend Mentor | Calculator app</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <header>
+                <h1 class="textColor">calc</h1>
+                <nav>
+                    <p class="textColor">Theme</p>
+                    <div>
+                        <ul class="theme-numbers">
+                            <li class="textColor">1</li>
+                            <li class="textColor">2</li>
+                            <li class="textColor">3</li>
+                        </ul>
+                        <ul class="toggle-container">
+                            <li class="theme1-toggle"></li>
+                            <li class="theme2-toggle"></li>
+                            <li class="theme3-toggle"></li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+            <div class="result">
+                0
+            </div>
+            <div class="keypad">
+                <div class="key">7</div>
+                <div class="key">8</div>
+                <div class="key">9</div>
+                <div class="key del">Del</div>
+                <div class="key">4</div>
+                <div class="key">5</div>
+                <div class="key">6</div>
+                <div class="key">+</div>
+                <div class="key">1</div>
+                <div class="key">2</div>
+                <div class="key">3</div>
+                <div class="key">-</div>
+                <div class="key">.</div>
+                <div class="key">0</div>
+                <div class="key">/</div>
+                <div class="key ex">x</div>
+                <div class="key reset">Reset</div>
+                <div class="key equal">=</div>
+            </div>
+        </div>
+        <div class="alert-container hidden">
+            <div class="alert-holder">
+                <div class="alert-message">
+                    Please Check the Expression.
+                </div>
+                <button class="ok">
+                    Ok
+                </button>
+            </div>
+        </div>
+    </body>
+
+</html>

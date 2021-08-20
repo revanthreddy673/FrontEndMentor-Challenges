@@ -1,0 +1,466 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap');
+
+:root {
+    --theme1-main-bg: hsl(222, 26%, 31%);
+    --theme1-toggle-keypad-bg: hsl(223, 31%, 20%);
+    --theme1-screen-bg: hsl(224, 36%, 15%);
+    --theme1-reset-delete-bg: hsl(225, 21%, 49%);
+    --theme1-reset-delete-shadow: hsl(224, 28%, 35%);
+    --theme1-toggle-equal-bg: hsl(6, 63%, 50%);
+    --theme1-equal-shadow: hsl(6, 70%, 34%);
+    --theme1-numbers-bg: hsl(30, 25%, 89%);
+    --theme1-numbers-shadow: hsl(28, 16%, 65%);
+    --theme1-numbers-color: hsl(221, 14%, 31%);
+    --theme1-reset-delete-color: hsl(0, 0, 100%);
+    --theme1-equal-color: hsl(0, 0, 100%);
+    --theme1-calc-theme-color: hsl(0, 0, 100%);
+
+    --theme2-main-bg: hsl(0, 0%, 90%);
+    --theme2-toggle-keypad-bg: hsl(0, 5%, 81%);
+    --theme2-screen-bg: hsl(0, 0%, 93%);
+    --theme2-reset-delete-bg: hsl(185, 42%, 37%);
+    --theme2-reset-delete-shadow: hsl(185, 58%, 25%);
+    --theme2-toggle-equal-bg: hsl(25, 98%, 40%);
+    --theme2-equal-shadow: hsl(25, 99%, 27%);
+    --theme2-numbers-bg: hsl(45, 7%, 89%);
+    --theme2-numbers-shadow: hsl(35, 11%, 61%);
+    --theme2-numbers-color: hsl(60, 10%, 19%);
+    --theme2-reset-delete-color: hsl(0, 0, 100%);
+    --theme2-equal-color: hsl(0, 0, 100%);
+    --theme2-calc-theme-color: hsl(60, 10%, 19%);
+
+    --theme3-main-bg: hsl(268, 75%, 9%);
+    --theme3-toggle-keypad-bg: hsl(268, 71%, 12%);
+    --theme3-screen-bg: hsl(268, 71%, 12%);
+    --theme3-reset-delete-bg: hsl(281, 89%, 26%);
+    --theme3-reset-delete-shadow: hsl(285, 91%, 52%);
+    --theme3-toggle-equal-bg: hsl(176, 100%, 44%);
+    --theme3-equal-shadow: hsl(177, 92%, 70%);
+    --theme3-numbers-bg: hsl(268, 47%, 21%);
+    --theme3-numbers-shadow: hsl(290, 70%, 36%);
+    --theme3-numbers-color: hsl(52, 100%, 62%);
+    --theme3-reset-delete-color: hsl(0, 0, 100%);
+    --theme3-equal-color: hsl(198, 20%, 13%);
+    --theme3-calc-theme-color: hsl(52, 100%, 62%);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Spartan', sans-serif;
+    font-size: 15px;
+    color: white;
+}
+
+body {
+    min-height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.5s;
+}
+
+.container {
+    max-width: 430px;
+}
+
+::marker {
+    content: "";
+}
+
+.textNumbers {
+    transition: color 0.5s;
+}
+
+button {
+    border: none;
+    outline: none;
+}
+
+button:focus {
+    outline: none;
+}
+
+/*************** theme switchers classes ******************/
+
+/*********** body ***************/
+body.theme1 {
+    background-color: var(--theme1-main-bg);
+}
+
+body.theme2 {
+    background-color: var(--theme2-main-bg);
+}
+
+body.theme3 {
+    background-color: var(--theme3-main-bg);
+}
+
+/************ text and numbers *************/
+.theme1 .textColor {
+    color: var(--theme1-calc-theme-color);
+}
+
+.theme2 .textColor {
+    color: var(--theme2-calc-theme-color);
+}
+
+.theme3 .textColor {
+    color: var(--theme3-calc-theme-color);
+}
+
+/************** toggle container bg **************/
+.theme1 .toggle-container {
+    background-color: var(--theme1-toggle-keypad-bg);
+}
+
+.theme2 .toggle-container {
+    background-color: var(--theme2-toggle-keypad-bg);
+}
+
+.theme3 .toggle-container {
+    background-color: var(--theme3-toggle-keypad-bg);
+}
+
+/**************** toggle buttons bg *********/
+.theme1 .theme1-toggle {
+    background-color: var(--theme1-toggle-equal-bg);
+    opacity: 1;
+}
+
+.theme2 .theme2-toggle {
+    background-color: var(--theme2-toggle-equal-bg);
+    opacity: 1;
+}
+
+.theme3 .theme3-toggle {
+    background-color: var(--theme3-toggle-equal-bg);
+    opacity: 1;
+}
+
+.theme2 .theme1-toggle:hover,
+.theme3 .theme1-toggle:hover {
+    border: 1px solid var(--theme1-toggle-equal-bg);
+    opacity: 1;
+}
+
+.theme1 .theme2-toggle:hover,
+.theme3 .theme2-toggle:hover {
+    border: 1px solid var(--theme2-toggle-equal-bg);
+    opacity: 1;
+}
+
+.theme1 .theme3-toggle:hover,
+.theme2 .theme3-toggle:hover {
+    border: 1px solid var(--theme3-toggle-equal-bg);
+    opacity: 1;
+}
+
+/*************** keypad ********************/
+.theme1 .keypad {
+    background-color: var(--theme1-toggle-keypad-bg);
+}
+
+.theme2 .keypad {
+    background-color: var(--theme2-toggle-keypad-bg);
+}
+
+.theme3 .keypad {
+    background-color: var(--theme3-toggle-keypad-bg);
+}
+
+/************* keys *********************/
+.theme1 .key {
+    background-color: var(--theme1-numbers-bg);
+    color: var(--theme1-numbers-color);
+    box-shadow: 0px 3px var(--theme1-numbers-shadow);
+}
+
+.theme2 .key {
+    background-color: var(--theme2-numbers-bg);
+    color: var(--theme2-numbers-color);
+    box-shadow: 0px 3px var(--theme2-numbers-shadow);
+}
+
+.theme3 .key {
+    background-color: var(--theme3-numbers-bg);
+    color: var(--theme3-numbers-color);
+    box-shadow: 0px 3px var(--theme3-numbers-shadow);
+}
+
+/****************** reset delete *************/
+.theme1 .reset,
+.theme1 .del {
+    background-color: var(--theme1-reset-delete-bg);
+    color: var(--theme1-reset-delete-color);
+    box-shadow: 0px 3px var(--theme1-reset-delete-shadow);
+}
+
+.theme2 .reset,
+.theme2 .del {
+    background-color: var(--theme2-reset-delete-bg);
+    color: var(--theme2-reset-delete-color);
+    box-shadow: 0px 3px var(--theme2-reset-delete-shadow);
+}
+
+.theme3 .reset,
+.theme3 .del {
+    background-color: var(--theme3-reset-delete-bg);
+    color: var(--theme3-reset-delete-color);
+    box-shadow: 0px 3px var(--theme3-reset-delete-shadow);
+}
+
+/********************** equal ********************/
+.theme1 .equal {
+    background-color: var(--theme1-toggle-equal-bg);
+    color: var(--theme1-equal-color);
+    box-shadow: 0px 3px var(--theme1-equal-shadow);
+}
+
+.theme2 .equal {
+    background-color: var(--theme2-toggle-equal-bg);
+    color: var(--theme2-equal-color);
+    box-shadow: 0px 3px var(--theme2-equal-shadow);
+}
+
+.theme3 .equal {
+    background-color: var(--theme3-toggle-equal-bg);
+    color: var(--theme3-equal-color);
+    box-shadow: 0px 3px var(--theme3-equal-shadow);
+}
+
+/*************** result *****************/
+.theme1 .result {
+    background-color: var(--theme1-screen-bg);
+    color: var(--theme1-calc-theme-color);
+}
+
+.theme2 .result {
+    background-color: var(--theme2-screen-bg);
+    color: var(--theme2-calc-theme-color);
+}
+
+.theme3 .result {
+    background-color: var(--theme3-screen-bg);
+    color: var(--theme3-calc-theme-color);
+}
+
+/********************** alert message *******************/
+.theme1 .alert-holder {
+    background-color: var(--theme1-toggle-keypad-bg);
+}
+
+.theme1 .alert-message {
+    color: var(--theme1-calc-theme-color);
+}
+
+.theme1 .ok {
+    background-color: var(--theme1-main-bg);
+    color: var(--theme1-calc-theme-color);
+}
+
+.theme2 .alert-holder {
+    background-color: var(--theme2-toggle-equal-bg);
+}
+
+.theme2 .alert-message {
+    color: var(--theme2-equal-color);
+}
+
+.theme2 .ok {
+    background-color: var(--theme2-main-bg);
+    color: var(--theme2-calc-theme-color);
+}
+
+.theme3 .alert-holder {
+    background-color: var(--theme3-toggle-keypad-bg);
+}
+
+.theme3 .alert-message {
+    color: var(--theme3-calc-theme-color);
+}
+
+.theme3 .ok {
+    background-color: var(--theme3-main-bg);
+    color: var(--theme3-calc-theme-color);
+}
+
+
+
+/***************************** header ****************************/
+header {
+    display: flex;
+    margin-bottom: 2em;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    align-self: flex-end;
+}
+
+header nav {
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+}
+
+header nav p {
+    font-size: 0.6rem;
+    margin-right: 2em;
+    text-transform: uppercase;
+    align-self: flex-end;
+    letter-spacing: 2px;
+}
+
+ul {
+    display: flex;
+}
+
+ul li:last-of-type {
+    margin-right: 0;
+}
+
+.theme-numbers {
+    padding: 5px 10px;
+}
+
+.theme-numbers li {
+    margin-right: 2em;
+    font-size: 0.6rem;
+}
+
+.toggle-container {
+    border-radius: 10px;
+    height: 13px;
+    padding: 4px 4px;
+    transition: background-color 0.5s;
+}
+
+.toggle-container li {
+    width: 100%;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-right: 1em;
+    font-size: 1rem;
+    opacity: 0;
+    transition: opacity 0.5s, border 0.5s;
+}
+
+/****************** result ***************/
+.result {
+    position: relative;
+    padding: 1em;
+    height: auto;
+    font-size: 2rem;
+    margin-bottom: 1em;
+    border-radius: 10px;
+    transition: color 0.5s, background-color 0.5s;
+    text-align: right;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+/************* keypad *********************/
+.keypad {
+    display: grid;
+    gap: 1em;
+    padding: 2em;
+    grid-template-columns: repeat(4fr, 1);
+    grid-template-rows: repeat(5fr, 1);
+    border-radius: 10px;
+    transition: background-color 0.5s;
+}
+
+.key {
+    transition: color 0.5s, background-color 0.5s, transform 0.2s;
+    font-size: 1.6rem;
+    padding: 10px 30px;
+    text-transform: uppercase;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.del,
+.reset,
+.equal,
+.ex {
+    font-size: 1rem;
+}
+
+.reset,
+.equal {
+    padding: 1em;
+}
+
+.reset {
+    grid-column: 1/3;
+}
+
+.equal {
+    grid-column: 3/5;
+}
+
+
+/********************** Alert *****************/
+.alert-container {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(186, 186, 186, 0.5);
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.alert-holder {
+    padding: 2em;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    transition: background-color 0.5s;
+}
+
+.alert-message {
+    margin-bottom: 2em;
+    text-transform: uppercase;
+    transition: color 0.5s;
+}
+
+.ok {
+    padding: 1em 2em;
+    cursor: pointer;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+
+@media screen and (max-width: 450px) {
+    .key {
+        font-size: 2rem;
+        padding: 15px;
+    }
+
+    .del,
+    .reset,
+    .equal,
+    .ex {
+        font-size: 1.5rem;
+    }
+}
