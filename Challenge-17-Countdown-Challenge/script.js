@@ -26,7 +26,7 @@ function setValues() {
   prevDayValue = d;
 
   // Add values to DOM
-  day.textContent = d;
+  day.textContent = d < 10 ? "0" + d : d;
   hour.textContent = h < 10 ? "0" + h : h;
   minute.textContent = m < 10 ? "0" + m : m;
   second.textContent = s < 10 ? "0" + s : s;
