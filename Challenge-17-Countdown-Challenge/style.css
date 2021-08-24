@@ -89,6 +89,7 @@ main {
 
 .top {
     top: 0;
+    opacity: 0.5;
 }
 
 .bottom {
